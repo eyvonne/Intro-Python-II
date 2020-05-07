@@ -5,10 +5,10 @@ from typing import List
 
 
 class Room():
-    def __init__(self, name: str, description: str, treasure=[]):
+    def __init__(self, name: str, description: str):
         self.name = name
         self.desc = description
-        self.treasure = treasure
+        self.treasure = []
 
     def __getattr__(self, attr):
         if attr[-3:] == '_to':
